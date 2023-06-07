@@ -1,0 +1,21 @@
+<%- include('partials/head',{titulo:'Crear cuenta'}); %>
+
+  <body>
+    <div class="container">
+      <h1>Crear cuenta</h1>
+      <div class="form-container">
+        <form action='/crear_cuenta/crearCuenta' method="post">
+          <div class="forma">
+            <input name="correo" type="text" placeholder="correo electronico">
+            <input name="user" type="text" placeholder="nombre de usuario">
+            <input name="nombres" type="text" placeholder="nombre(s)">
+            <input name="apellido_P" type="text" placeholder="Apellido paterno">
+            <input name="apellido_M" type="text" placeholder="Apellido materno">
+            <input name="passwd" type="password" placeholder="contraseña">
+            <input class="btn" type="submit" value="Crear">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  </html>

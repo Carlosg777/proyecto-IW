@@ -38,6 +38,15 @@
  #recuperar-contrasenia a{
    text-decoration: none;
  }
+
+ #crear_cuenta{
+   padding-top: 2%;
+   text-align: left;
+ }
+
+ #crear_cuenta a{
+   text-decoration: none;
+ }
  
  .forma{
     margin-top: 30px;

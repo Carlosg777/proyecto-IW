@@ -1,0 +1,218 @@
+/***************************************************************************/
+/*GLOBAL*/
+
+body{
+    display:                flex;
+    justify-content:        center;
+    align-items:            center;
+    height:                 100vh;
+    margin:                 0;
+}
+
+.estructura{
+    background:             #24303c;  
+    color:                  white ;/*VERIFICAR SI SE PUEDE QUITAR*/
+    box-shadow:             7px 13px 37px #000; /*SOMBRA*/
+    margin-top:             20px;
+    border-radius:          4px;
+    padding:                15px;
+}
+
+.inputDatos{
+    width:                  98%; 
+    background-color:       24303c;
+    padding:                8px 3px;
+    border-radius:          4px;    /*VERIFICAR SI SE PUEDE REDUCIR*/
+    font-size:              18px;
+}
+
+.botonEnviar{    
+    background-color:       #52c22f;
+    color:                  white;
+    font-size:              20px;
+    height:                 50px;
+    width:                  200px;
+    border-radius:          4px;
+}/*FIN DE botonEnviar*/
+
+input:hover{
+    border:                 3px #4466af solid;
+}
+
+.hoverable:hover {
+    background-color:       #34b40d;
+}
+
+/****************************************************************************/
+/*INICIAR SESION*/
+
+.iniciarSesion{    
+    width:                  500px;
+    height:                 350px;
+}
+
+.grid__IniciarSesion{
+    margin:                 10px;
+    display:                grid;
+    grid-template-columns:  repeat(4, 25%);
+    grid-template-rows:     25% 18% 18% 21% 18%;
+}
+
+.grid-nested__IniciarSesion{
+    /*border: 3px green solid;*/ 
+    margin:                 4px;
+    padding:                5px;
+}
+
+h4{
+    font-family:            'calibri';
+    color:                  white;    
+    font-size:              30px;
+    margin:                 0px;
+    text-align:             center;
+}/*FIN DE H4*/
+
+.caja__IniciarSesion{
+    text-align:             center;
+    margin-top:             15px;
+    font-size:              18px;
+}/*fin de caja*/
+
+.c1{
+    grid-column:            1/5;
+}
+
+.c2{
+    grid-column:            1/3;
+    padding:                20px;
+}
+
+.c3{
+    grid-column:            3/5;
+    padding:                20px;
+}
+
+a{
+    color:                  rgb(255, 255, 255);
+    font-family:            'calibri';
+    text-decoration:        none;
+}
+
+/****************************************************************************/
+/*CREAR CUENTA*/
+
+.crearCuenta{
+    width:                  550px;
+    height:                 550px;   
+}
+
+.grid__CrearCuenta{
+    margin:                 2px;
+    display:                grid;
+    grid-template-columns:   20% auto auto auto;
+    grid-template-rows:     15% 12% 12% 12% 12% 12%;
+}
+
+.grid-nested__CrearCuenta{
+    /*border:                 2px #0799b6 solid;*/
+    margin:                 5px;
+    padding:                2px;
+}
+
+.ajuste__derecha__CrearCuenta{
+    margin-right: 10px;
+}
+
+.centrar{
+    text-align: center;
+}
+
+.gridNestedNested__CrearCuenta{
+    /*border: 2px #f1da08 solid;*/
+    display:                grid;
+    grid-template-columns:  33% 33% 33%;
+    grid-template-rows:     auto;
+}
+
+.caja__CrearCuenta{
+    color:                  rgb(255, 255, 255);
+    font-family:            'calibri';
+    text-align:             left;
+    font-size:              18px;
+}
+
+/****************************************************************************/
+/* RECUPERAR CUENTA */
+
+.recuperarCuenta{
+    width:                  500px;
+    height:                 280px;
+}/*FIN DE registro*/
+
+.grid__RecuperarCuenta{
+    display:                grid;
+    grid-template-columns:  1fr;
+    grid-template-rows:     25% 22% 24% 26%;
+}
+
+.grid-nested__RecuperarCuenta{
+    /*border:                 2px rgb(148, 0, 247) solid;*/
+    margin:                 10px 0px 10px 0px;
+}
+
+.caja__RecuperarCuenta{
+    color:                  rgb(255, 255, 255);
+    font-family:            'calibri';
+    text-align:             left;
+    font-size:              18px;
+}/*fin de caja*/
+
+/****************************************************************************/
+/* INGRESAR CÓDIGO */
+
+.estructuraCodigo{
+    width:                  500px;
+    height:                 240px;
+    padding:                15px;
+}/*FIN DE registro*/
+
+.grid__Codigo{
+    display:                grid;
+    grid-template-columns:  1fr;
+    grid-template-rows:     40% 27% 30%;
+}
+
+.nested-grid__Codigo{
+    /*border:                 2px rgb(148, 0, 247) solid;*/
+    margin:                 10px 8px;
+}
+
+.tituloCodigo{
+    text-align: left;
+}/*FIN DE H4*/
+
+.caja{
+    color:                  rgb(255, 255, 255);
+    font-family:            'calibri';
+    text-align:             left;
+    font-size:              18px;
+}/*fin de caja*/
+
+/****************************************************************************/
+/* CAMBIAR CONTRASEÑA */
+
+.estructuraCambioContraseña{
+    width:                  500px;
+    height:                 300px;
+}/*FIN DE registro*/
+
+.contenedorGrid{
+    display:                grid;
+    grid-template-columns:  1fr;
+    grid-template-rows:     20% 15% 22% 22% 25%;
+}
+
+.nested-grid{
+    /*border:                 2px rgb(148, 0, 247) solid;*/
+    margin:                 10px 8px;
+}
