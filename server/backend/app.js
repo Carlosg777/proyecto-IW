@@ -1,14 +1,16 @@
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { pool } from './db.js';
-import {PORT} from './config.js'
+import { pool } from './config/db.js';
+import {PORT} from './config/config.js'
 import path from 'path'
 import express from 'express'
 
 import iniciar_sesion from './routes/iniciar_sesion.js'
 import crear from './routes/crear_cuenta.js'
+import recuperar from './routes/recuperar.js'
 import users from './routes/users.js'
-
+import in_codigo from './routes/ingresar_codigo.js'
+import cambio_contra from './routes/cambio_contrasenia.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -26,10 +28,10 @@ app.set('view engine','ejs');
 // Rutas del proyecto
 app.use('/', iniciar_sesion);
 app.use('/users', users);
-app.use('/recuperar', (req, res) => {
-    res.render('recuperar');
-  });
+app.use('/recuperar',recuperar);
 app.use('/crear_cuenta',crear);
+app.use('/ingresar_codigo',in_codigo);
+app.use('/cambio_contrasenia',cambio_contra);
 
 //sql PRUEBA PING
 app.get('/ping', async (req, res) => {

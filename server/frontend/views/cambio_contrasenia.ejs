@@ -1,0 +1,17 @@
+<%- include('partials/head',{titulo:'Cambio de contraseña'}); %>
+
+  <body>
+    <div class="container">
+      <h1>Cambio de contraseña</h1>
+      <div class="form-container">
+        <form action="/cambio_contrasenia/cambioContrasenia" method="post">
+          <div class="forma">
+            <input name="pass" type="text" placeholder="Digite su nueva contraseña">
+            <input name="passConfir" type="text" placeholder="Confirme su contraseña nueva">
+            <input class="btn" type="submit" type="c" value="Confirmar">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  </html>

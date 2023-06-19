@@ -1,0 +1,16 @@
+<%- include('partials/head',{titulo:'Ingresar codigo'}); %>
+
+  <body>
+    <div class="container">
+      <h1>Ingrese su código: ( <%=codigoRecuperacion%>)</h1>
+      <div class="form-container">
+        <form action="/ingresar_codigo/codigo" method="post">
+          <div class="forma">
+            <input name="codigo" type="text" placeholder="Codigo enviado a su correo">
+            <input class="btn" type="submit" type="c" value="Enviar">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  </html>

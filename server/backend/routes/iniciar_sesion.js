@@ -1,5 +1,5 @@
 import express from 'express';
-import { pool } from '../db.js';
+import { pool } from '../config/db.js';
 // Se crea una instancia de router para gestionar las rutas del módulo usuario. 
 const router = express.Router();  
                                 
