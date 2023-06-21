@@ -1,11 +1,10 @@
 import express from 'express';
-import { pool } from '../config/db.js';
 
 const router = express.Router(); 
 
 router.get('/inicio', (req, res) => {
     const user = req.query.user ? JSON.parse(req.query.user) : null;
-    res.render('users/inicio', { user });
+    res.render('users/principal', { user });
   });
 
 

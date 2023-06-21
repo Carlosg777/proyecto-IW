@@ -1,21 +1,131 @@
 <%- include('partials/head',{titulo:'Crear cuenta'}); %>
 
-  <body>
-    <div class="container">
-      <h1>Crear cuenta</h1>
-      <div class="form-container">
-        <form action='/crear_cuenta/crearCuenta' method="post">
-          <div class="forma">
-            <input name="correo" type="text" placeholder="correo electronico">
-            <input name="user" type="text" placeholder="nombre de usuario">
-            <input name="nombres" type="text" placeholder="nombre(s)">
-            <input name="apellido_P" type="text" placeholder="Apellido paterno">
-            <input name="apellido_M" type="text" placeholder="Apellido materno">
-            <input name="passwd" type="password" placeholder="contraseña">
-            <input class="btn" type="submit" value="Crear">
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
-  </html>
+<body>
+    
+  <header>
+      <h2 class="fuente">U ACADEMY</h2>
+  </header>
+
+  <main>
+
+  <form id="formulario" action="/crear_cuenta/crearCuenta" class="grid__CrearCuenta crearCuenta estructura" method="post">
+
+      <section class="grid-nested__CrearCuenta c1">
+          <h4>CREA UNA CUENTA</h4>
+      </section>
+
+      <section class="grid-nested__CrearCuenta c1 caja__CrearCuenta">
+          <p>Completa los datos que se te solicitan.</p>
+      </section>
+
+      <!--NOMBRE(S) Y APELLIDOS -->
+      <div class="gridNestedNested__CrearCuenta c1"> 
+
+          <section class="grid-nested__CrearCuenta">
+              <input  class=          "inputDatos"
+                      type=           "text" 
+                      id=             "nombres"
+                      name=           "nombres"
+                      placeholder=    "Nombre(s)"
+                      pattern=        "^(?!.*([a-zA-ZÁ-ÿ])\1\1)[A-Za-zÁ-ÿ]{3,10}(\s[a-zA-ZÁ-ÿ]{3,20})?"
+                      title=          "Introduce tu(s) nombre(s)"
+                      maxlength=      "20"
+                      required> 
+                      <span> </span>
+          </section>
+
+          <section class="grid-nested__CrearCuenta">
+              <input  class=          "inputDatos" 
+                      type=           "text" 
+                      id=             "apellido_P" 
+                      name=           "apellido_P" 
+                      placeholder=    "Apellido Paterno"
+                      pattern=        "^(?!.*([A-Za-zÁ-ÿñÑ])\1\1)[A-Za-zÁ-ÿñÑ]{3,10}"
+                      title=          "Introduce tu apellido paterno"
+                      maxlength=      "20"
+                      required> 
+                      <span> </span>                   
+          </section>
+
+          <section class="grid-nested__CrearCuenta ">
+              <input  class=          "inputDatos" 
+                      type=           "text" 
+                      id=             "apellido_M" 
+                      name=           "apellido_M" 
+                      placeholder=    "Apellido Materno"
+                      pattern=        "^(?!.*([a-zA-ZÁ-ÿñÑ])\1\1)[A-Za-zÁ-ÿñÑ]{3,10}"
+                      title=          "Introduce tu apellido materno"
+                      maxlength=      "20"
+                      required> 
+                      <span> </span>
+          </section>
+      </div><!--FIN DE NOMBRE(S) Y APELLIDOS-->
+
+      <!--NOMBRE DE USUARIO -->
+      <section class="grid-nested__CrearCuenta c1">
+          <input  class=             "inputDatos"
+                  type=               "text" 
+                  id=                 "user"
+                  name=               "user"
+                  placeholder=        "Nombre de usuario"
+                  pattern=            "^[a-zA-Z0-9]{4,20}$"
+                  title=              "Introduce tu nombre de usuario (Sólamente letras y números)"
+                  maxlength=          "20"
+                  required> 
+                  <span> </span>
+      </section>
+      
+      <!-- CORREO -->
+      <section class="grid-nested__CrearCuenta c1">    
+          <input      class=          "inputDatos"  
+                      type=           "email" 
+                      id=             "correo" 
+                      name=           "correo" 
+                      placeholder=    "Ingresa tu email"
+                      pattern=        "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                      title=          "Ingresa tu correo electrónico" 
+                      required> 
+                      <span> </span>
+      </section>
+      
+      <!--CONTRASEÑA 1 -->
+      <section class="grid-nested__CrearCuenta c2">
+          <input      class=          "inputDatos" 
+                      type=           "password" 
+                      id=             "passwd" 
+                      name=           "passwd"  
+                      placeholder=    "Contraseña nueva"             
+                      pattern=        "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                      title=          "Ingresa una contraseña mayor a 8 carácteres con 1 mayúscula y 1 número"
+                      required>
+                      <span> </span>
+                      <!-- onclick=        "validarContraseniaRecuperacion(event)"-->
+      </section>
+      
+      <!--CONTRASEÑA 2     -->
+      <section class="grid-nested__CrearCuenta c3">
+          <input      class=          "inputDatos" 
+                      type=           "password" 
+                      id=             "contrasenia2" 
+                      name=           "contrasenia2"  
+                      placeholder=    "Confirma tu contraseña"             
+                      pattern=        "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                      title=          "Confirma tu contraseña"
+                      required>
+                      <span> </span>
+      </section>
+  
+      <section class="grid-nested__CrearCuenta c1 centrar"><!-- ENVIAR-->
+          <input      class=          "botonEnviar hoverable" 
+                      type=           "submit" 
+                      value=          "Enviar">
+      </section>
+
+  </form>
+
+  </main>
+
+  <script src="/js/validacioncrearCuenta.js"></script>
+
+</body>
+</html>

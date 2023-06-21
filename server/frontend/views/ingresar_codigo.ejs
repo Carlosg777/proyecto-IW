@@ -1,0 +1,37 @@
+<%- include('partials/head',{titulo:'Ingresar codigo'}); %>
+
+<body>
+
+  <header>
+      <h2 class="fuente">U ACADEMY</h2>
+  </header>
+
+  <main>
+
+  <form action="/ingresar_codigo/codigo" class="estructura estructuraCodigo grid__Codigo" method="post"> 
+    <h1>Ingrese su código: ( <%=codigoRecuperacion%>)</h1>
+      <h4 class="nested-grid__Codigo tituloCodigo"> Ingresa el código que se envió a tu correo </h4>
+
+      <section class="nested-grid__Codigo">
+          <input  class=          "inputDatos"  
+                  type=           "text" 
+                  id=             "codigo" 
+                  name=           "codigo" 
+                  pattern=        "[0-9]{6}"
+                  placeholder=    "Ingresa el código" 
+                  required > 
+      </section>
+
+      <section class="nested-grid__Codigo centrar">
+          <input  class=           "botonEnviar hoverable" 
+                  type=            "submit" 
+                  value=           "Enviar">
+      </section>
+  </form>
+
+</main>
+
+  <script src="/js/validacioncodigoRecuperacion.js"></script>
+</body>
+</html>
+

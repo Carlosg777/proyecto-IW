@@ -1,23 +1,64 @@
 <%- include('partials/head',{titulo:'Inicio de Sesión'}); %>
 
+
   <body>
-    <div class="container">
-      <h1>Iniciar Sesión</h1>
-      <div class="form-container">
-        <form action='/iniciarSesion' method="post">
-          <div class="forma">
-            <input name="user" type="text" placeholder="nombre de usuario">
-            <input name="passwd" type="password" placeholder="contraseña">
-            <input class="btn" type="submit" value="Ingresar">
-          </div>
-        </form>
-        <div id="recuperar-contrasenia">
-          <p><a href="/recuperar">¿Olvidaste tu contraseña?</a></p>
-        </div>
-        <div id="crear_cuenta">
-          <p><a href="/crear_Cuenta">¿No tienes una cuenta?</a></p>
-        </div>
-      </div>
-    </div>
-  </body>
-  </html>
+
+
+    <header>
+        <h2 class="fuente">U ACADEMY</h2>
+    </header>
+
+    <main>
+              
+    <form action='/iniciarSesion' id="formulario" class="estructura iniciarSesion grid__IniciarSesion" method="post">    
+        
+        <section class="grid-nested__IniciarSesion c1">
+            <h4>INICIAR SESIÓN</h4>
+        </section>
+
+        <section class="grid-nested__IniciarSesion c1"> <!--CORREO O NOMBRE DE USUARIO-->
+            <input  class=         "inputDatos"  
+                    type=           "text" 
+                    id=             "user" 
+                    name=           "user" 
+                    placeholder=    "Ingresa tu email o nombre de usuario"  
+                    title=          "Ingresa tu correo electrónico"
+                    required> 
+                    <span> </span>  <!--AQUI RECAE LA VALIDACIÓN -->
+        </section>
+
+        <section class="grid-nested__IniciarSesion c1"> <!--CONTRASEÑA-->
+            <input  
+                    class=          "inputDatos" 
+                    type=           "password" 
+                    id=             "passwd" 
+                    name=           "passwd"
+                    pattern=        "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    placeholder=    "Ingresa tu contraseña"
+                    title=          "Ingresa tu contraseña"     
+                    required>
+                    <span> </span>  <!--AQUI RECAE LA VALIDACIÓN -->
+        </section>
+
+        <section class="grid-nested__IniciarSesion c1 centrar"> <!--ENVIAR-->
+            <input class=           "botonEnviar hoverable" 
+                    type=           "submit">
+    
+        </section>
+        
+        <section class="grid-nested__IniciarSesion c2 caja__IniciarSesion"> <!--CREAR CUENTA-->
+            <a href="/crear_Cuenta">Crear cuenta</a>
+        </section>
+    
+        <section class="grid-nested__IniciarSesion prueba c3 caja__IniciarSesion"> <!--RECUPERAR CUENTA-->
+            <a href="/recuperar">Recuperar cuenta</a>
+        </section>
+
+    </form>
+
+</main>
+
+    <script src="/js/validacioniniciarSesion.js"></script>
+
+</body>
+</html>

@@ -1,11 +1,10 @@
 import express from 'express';
-import { pool } from '../db.js';
+import { pool } from '../config/db.js';
 // Se crea una instancia de router para gestionar las rutas del módulo usuario. 
 const router = express.Router();  
 
 router.get('/', (req, res)=>{    
     res.render('crear_cuenta');
-    console.log("AQUIII");
 });
 
 router.post('/crearCuenta', async (req, res)=>{

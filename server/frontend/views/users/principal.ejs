@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <title>Inicio</title>
+</head>
+
+<body>
+
+   <div class="container">
+        <!--Encabezado-->
+        <header>
+            <div class="container_logo">
+                <h1>Bienvenido <span> <%=user.nombre_usuario%> </span></h1>
+                <img-logo src="logo2.png" alt="logo" class="img-logo">
+           
+                <h1>U ACADEMY</h1>
+            </div>
+            
+            <nav>
+
+                <div class="btn-menu">
+                    <label for="btn-menu">☰</label>
+                </div>
+
+                <div>
+                    <img id="carrito" class="carrito" src="/imagenes/carrito-de-compras.png" alt="carrito">
+                    <div id="numero"></div>
+                </div> 
+        
+        </header>
+
+        <div class="tit2">
+            <h2> Nuestros Cursos</h2>
+            
+        </div>
+                
+        <main>
+            <div id="contenedor" class="contenedor"> </div>
+        </main>
+        
+
+        <div id="contenedorCompra">
+            <div class="informacionCompra" id="informacionCompra">
+                <h2>CARRITO</h2>
+                <p class="x" id="x">x</p>
+            </div>
+    
+            <div class="productosCompra" id="productosCompra">
+                
+            </div>
+            
+
+            <div class="total" id="total"></div>
+
+            <button>Finalizar Compra</button>
+        </div> 
+        
+        <!--Menu lateral-->
+
+    <input type="checkbox" id="btn-menu">
+        <div class="container-menu">
+	        <div class="cont-menu">
+		        <nav>
+			
+			    <a href="#online">Curso Online</a>
+			    <a href="#presencial">Curso Presencial</a>
+			    <a href="#vivo">Curso En Vivo</a>
+                <a href="/datosUsuario">Agregar tarjeta</a>
+                <a href="#conocenos">Conocenos</a>
+               
+                <a href="#">Agregar tarjeta</a>
+			
+		        </nav>
+		        <label for="btn-menu">✖️</label>
+	        </div>
+        </div>
+      
+
+    <div class="tit2" id="online">
+        <h2> Curso Online</h2>
+        
+    </div>
+
+
+
+    <div class="flex2">
+        <div>
+            <p>
+                <h2>¿CÓMO CONVERTIRSE EN CREADOR DE CONTENIDO?</h2>
+            </p>
+        </br>
+            <p>
+                <h3>
+                    Con esta Master Class, podrás desarrollar contenidos de mejor calidad, aplicando conocimientos más técnicos que harás que tus contenidos luzcan más profesionales. Lo mejor de todo, 
+                    serás capaz de crearlos tu mismo y tendrás las bases necesarias para comenzar o bien subir tu nivel como creador.
+                </br></br>
+                    TEMARIO:
+                </br></br>
+                1. Modulo 1. ¿Qué debo tomar en cuenta para ser un creador de contenido?
+                </br></br>
+                2. Modulo 2. La Técnica
+                </br></br>
+                3. Modulo 3. Conceptos básicos de lenguaje audiovisual.
+                </br></br>
+                4. Modulo 4. Preparando tus capturas para el resultado final.
+                </br></br>
+                5. Modulo 5. División de Contenidos.
+                </br></br>
+                6.Encuesta de satisfacción.
+                </h3>
+            </p>
+
+
+        
+        </div>
+
+        <div>
+            <p>
+                <h2>ABC FOTOGRAFÍA DE PRODUCTO</h2>
+            </p>
+
+            <p>
+                <h3>
+                </br>
+                    En este curso aprenderás temas sobre cómo comenzar a realizar tus fotografías de producto, los aspectos necesarios a considerar 
+                    para desarrollar una buena fotografía, así los equipos de iluminación que te funcionarán mejor o en su caso cómo resolverlo con luz natural.
+                    </br></br>
+                    TEMARIO:
+                    </br></br>
+                    1. Tipos de fotografia de producto.
+                    </br></br>
+                    2. Consideraciones del proceso creativo.
+                    </br></br>
+                    3. Herramientas de trabajo.
+                    </br></br>
+                    4. Equipo de iluminación.
+                    </br></br>
+                    5. Medición de luz con exposímetro y configuración de la cámara.
+                    </br></br>
+                    6. Sesión One to One
+                    </br></br>
+                    7. Encuesta de satisfacción. 
+        
+                    
+                </h3>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <h2>ABC DE VLOGGER</h2>
+            </p>
+        
+            <p>
+            </br>
+                <h3>
+                    - En este curso aprenderás sobre las principales herramientas para comenzar a grabar tus videos, desde el desarrollo de guion, 
+                    la iluminación necesaria, los objetivos que mejor te pueden servir al grabar, hasta cómo posicionarte y promocionarte con el público.
+                </br>
+                - Ser videoblogger no sólo implica el conocimiento de la parte técnica, sino la exploración de un mercado con
+                 diferente comportamiento de consumo y que se mantiene en constante evolución.
+                </br></br>
+                TEMARIO:
+                 </br></br>
+                 1. Introducción al Videoblog.
+                </br></br>
+                 2. Comunicación Audiovisual.
+                </br></br>
+                3. Estructura y Formato para el guion.
+                 </br></br>
+                4. Herramientas de equipo.
+                 </br></br>
+                5. Configuración de cámara.
+                 </br></br>
+                6. Postproducción.
+                 </br></br>
+                7. One to One
+                 </br></br>
+                8.Encuesta de satisfacción.
+
+
+                </h3>
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="tit4" id="presencial">
+        <h2> Curso Presenciales</h2>
+        
+    </div>
+
+    <div class="flex4">
+        <div>
+            <p>
+                <h2>ABC DE LA FOTOGRAFÍA</h2>
+            </p>
+
+            <p>
+                <h3>
+                    </br></br>
+                    El alumno conocerá los fundamentos de la fotografía digital, la configuración del equipo 
+                    fotográfico en relación a la luz, y el uso del modo manual; sentará las bases para desarrollar fotografía.
+                    </br></br>
+                    TEMARIO:
+                    </br></br>
+                    1. ¿Qué es la fotografia?
+                    </br></br>
+                    2. El origen de la fotografia digital.
+                    </br></br>
+                    3. La cámara 
+                    </br></br>
+                    4. El sensor. el pixel, el tamaño de la imagén, la resolución.
+                    </br></br>
+                    5. Rango dinamico.
+                    </br></br>
+                    6. Caracteristicas de la luz.
+                    </br></br>
+                    7. Encuesta de satisfacción.
+                </h3>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <h2>ABC DE LA ILUMINACIÓN</h2>
+            </p>
+
+            <p>
+                <h3>
+                </br></br>
+                El alumno aprenderá sobre el comportamiento de la luz, para poder trabajar con ella como una herramienta que destaca en el desarrollo de una fotografía y 
+                conocerá herramientas de iluminación, tanto portátiles como de estudio, sentando las bases para la lectura y comprensión de la imagen.
+                </br></br>
+                TEMARIO:
+                </br></br>
+                1. Luz, composición y discurso.
+                </br></br>
+                2. Conceptos escenciales de iluminación en fotografia
+                </br></br>
+                3. El estudio fotografico
+                </br></br>
+                4. Fotometría: cantidad de luz para una xorrecta exposición
+                </br></br>
+                5. Introducción a los esquemas de iluminación
+                </br></br>
+                6. Encuesta de satisfacción
+                </h3>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <h2>ABC LIGHTROOM CLASSIC BÁSICO</h2>
+            </p>
+
+            <p>
+                <h3>
+                </br></br>
+                El alumno sentará las bases en la administración fotográfica 
+                y podrá crear un flujo de trabajo efectivo: desde la descarga a la edición y distribución del material fotográfico.
+                </br></br>
+                TEMARIO:
+                </br></br>
+                1. Presentación del software y espacio de trabajo.
+                </br></br>
+                2. Módulo Biblioteca (administración).
+                </br></br>
+                3. Ejercicio de Toma Fotografica.
+                </br></br>
+                4. Módulo Revelar.
+                </br></br>
+                5. Herramientas avanzadas.
+                </br></br>
+                6. Encuesta de satisfacción.
+                </h3>
+
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="tit5" id="vivo">
+        <h2> Cursos Virtuales en Vivo</h2>
+        
+    </div>
+
+    <div class="flex5">
+        <div>
+            <p>
+                <h2>ABC DE LA FOTOGRAFÍA</h2>
+            </p>
+
+            <p>
+            </br></br>
+                <h3>
+                    El alumno conocerá los fundamentos de la fotografía digital, 
+                    la configuración del equipo fotográfico en relación a la luz, y el uso del modo manual; sentará las bases para desarrollar fotografía.
+                    </br></br>
+                    TEMARIO:
+                </br></br>
+                1. ¿Qué es la fotografia?
+                </br></br>
+                2. El origen de la fotografia digital.
+                </br></br>
+                3. La cámara 
+                </br></br>
+                4. El sensor. el pixel, el tamaño de la imagén, la resolución.
+                </br></br>
+                5. Rango dinamico.
+                </br></br>
+                6. Caracteristicas de la luz.
+                </br></br>
+                7. Encuesta de satisfacción.
+                    
+                </h3>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <h2>ABC DE LA ILUMINACION</h2>
+            </p>
+            <p>
+                <h3>
+                </br></br>
+                El alumno aprenderá sobre el comportamiento de la luz, para poder trabajar con ella como una herramienta que destaca en el desarrollo de una fotografía y 
+                conocerá herramientas de iluminación, tanto portátiles como de estudio, sentando las bases para la lectura y comprensión de la imagen.
+                </br></br>
+                TEMARIO:
+                </br></br>
+                1. Luz, composición y discurso.
+                </br></br>
+                2. Conceptos escenciales de iluminación en fotografia
+                </br></br>
+                3. El estudio fotografico
+                </br></br>
+                4. Fotometría: cantidad de luz para una xorrecta exposición
+                </br></br>
+                5. Introducción a los esquemas de iluminación
+                </br></br>
+                6. Encuesta de satisfacción
+
+                </h3>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                <h2>ABC LIGHTROOM CLASSIC BÁSICO</h2>
+            </p>
+            <p>
+                <h3>
+                </br></br>
+                El alumno sentará las bases en la administración fotográfica 
+                y podrá crear un flujo de trabajo efectivo: desde la descarga a la edición y distribución del material fotográfico.
+                </br></br>
+                TEMARIO:
+                </br></br>
+                1. Presentación del software y espacio de trabajo.
+                </br></br>
+                2. Módulo Biblioteca (administración).
+                </br></br>
+                3. Ejercicio de Toma Fotografica.
+                </br></br>
+                4. Módulo Revelar.
+                </br></br>
+                5. Herramientas avanzadas.
+                </br></br>
+                6. Encuesta de satisfacción.
+
+                </h3>
+            </p>
+        </div>
+        
+    </div>
+
+    
+    <div class="tit3" id="conocenos">
+    </br>  </br>  </br>  
+        <h2> CONÓCENOS</h2>
+    </br>  </br>  
+        
+    </div>
+
+    <div class="flex">
+
+        <div>
+            <h2>1. Sobre nosotros</h2>
+            </br>
+            <p>Somos una empresa con más de 15 años de experiencia en el campo de la fotografía, nos dedicamos a preparar a futuros fotografos 
+                con hambre de aprender y saber apreciar el arte que es la fotografia, captura moemntos, captura memorias, captura emociones.
+                
+            </br></br></br></br>
+            </p>
+
+
+
+        </div>
+        <div>
+
+            <h2>2. Modalidades que ofrecemos</h2>
+            </br>
+            <p>Nos adaptamos a tus posibilidades. Ofrecemos 3 modalidades: 
+            </br></br>
+                -CURSOS ONLINE: En éste podrás llevar tres cursos que te ayudarán en 
+                tu formación como fotografo, desde como manejar una camará, conceptos basicos y necesarios para su configuración, así como 
+                conceptos avanzados para que seas ¡todo un profesional! Y por ultimo un curso de edición, para mejorar las condiciones de tus fotografías.
+            </br>
+                Lo mejor, puedes tomar las clases en el tiempo que mejor te acomode, al final mandarás tu proyecto final y será evaluado por un maestro asignado.
+            </br></br>
+                -CURSOS PRESENCIALES: En éste podrás llevar tres cursos que te ayudarán en 
+                tu formación como fotografo, desde como manejar una camará, conceptos basicos y necesarios para su configuración, así como 
+                conceptos avanzados para que seas ¡todo un profesional! Y por ultimo un curso de edición, para mejorar las condiciones de tus fotografías.
+            </br>
+                Asiste a nuestras instalaciones, nosotros te proporcinaremos equipo y espacios donde puedes practicar y llevar a cabo tus clases. Te asiganremos 
+                a nuestros mejores maestros que te guiarán a lo largo de este curso.
+            </br></br>
+                -CURSOS EN VIVO: n éste podrás llevar tres cursos que te ayudarán en 
+                tu formación como fotografo, desde como manejar una camará, conceptos basicos y necesarios para su configuración, así como 
+                conceptos avanzados para que seas ¡todo un profesional! Y por ultimo un curso de edición, para mejorar las condiciones de tus fotografías.
+            </br>
+                Tomarás las clases de manera virtual pero ¡en vivo!, será como regresar a los tiempos de pandemia. Desde la comodidad de tu casa, tomando
+                clases desde tu dispositivo podrás aprender todo lo necesario para especializarte y ser el mejor
+
+            </br></br></br></br>
+            </p>
+
+        </div>
+        <div>
+            <h2>3. Contactanos</h2>
+        </br>
+            <p>
+                -FACEBOOK: UACADEMY OFICIAL
+            </br></br>
+                -INSTAGRAM: @uacademy_of
+            </br></br>
+                -TWITTER: @uacademy_of
+            </br></br>
+                -MAIL: uacade@academy.mx
+
+                </br></br></br>
+
+            </p>
+        
+        </div>
+
+    </div>
+
+   <script src="/js/script.js"></script>
+    
+</body>
+</html>

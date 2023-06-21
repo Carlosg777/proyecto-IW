@@ -1,0 +1,54 @@
+<%- include('partials/head',{titulo:'Cambio de contraseña'}); %>
+
+<body>
+
+  <header>
+      <h2 class="fuente">U ACADEMY</h2>
+  </header>
+
+  <main>
+
+  <form id="formulario" action="/cambio_contrasenia/cambioContrasenia" class="estructura estructuraCambioContraseña contenedorGrid" method="post">
+      
+      <section class="nested-grid"    >
+          <h4>NUEVA CONTRASEÑA</h4>
+      </section>
+      
+      <section class="nested-grid caja">
+          Llena los campos para crear una nueva contraseña
+      </section>
+
+      <section class="nested-grid">
+          <input class="inputDatos"
+                  type=               "password"
+                  id=                 "pass"
+                  name=               "pass" 
+                  placeholder=        "Ingresa tu nueva contraseña"
+                  pattern=            "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  required>
+                  <span></span>
+      </section>
+
+      <section class="nested-grid">
+          <input class="inputDatos"
+                  type=               "password"
+                  id=                 "pass1"
+                  name=               "pass1" 
+                  placeholder=        "Confirma tu contraseña"
+                  pattern=            "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  required>
+                  <span></span>
+      </section>    
+  
+      <section class="nested-grid centrar">
+          <input  class=      "botonEnviar hoverable"
+                  type=       "submit"
+                  value=      "Enviar">
+      </section>
+  </form>
+
+  </main>
+
+  <script src="/js/ValidacioncambioDeContraseña.js"></script>
+</body>
+</html>
