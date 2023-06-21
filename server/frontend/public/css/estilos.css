@@ -1,20 +1,45 @@
 /***************************************************************************/
 /*GLOBAL*/
-
 body{
-    display:                flex;
+        border: 3px green solid;
+    background:             #f2e6cf; 
+    /*display:                flex;*/
     justify-content:        center;
     align-items:            center;
     height:                 100vh;
     margin:                 0;
 }
 
+/***************************************************************************/
+
+header{
+/*    border: 3px green solid;*/
+    display:                flex;
+
+justify-content:        center;
+align-items:            center;
+text-align:             center;
+font-family:            'calibri';
+}
+
+main{
+/*    border: 3px rgb(4, 0, 128) solid;*/
+    display:                flex;
+    justify-content:        center;
+    align-items:            center;
+    text-align:             center;
+}
+
+.fuente{
+    font-size: 35px;
+}
+/***************************************************************************/
 .estructura{
-    background:             #24303c;  
-    color:                  white ;/*VERIFICAR SI SE PUEDE QUITAR*/
+/*    background:             #24303c;  */
+    background:             #114c5f;
     box-shadow:             7px 13px 37px #000; /*SOMBRA*/
     margin-top:             20px;
-    border-radius:          4px;
+    border-radius:          6px;
     padding:                15px;
 }
 
@@ -22,29 +47,36 @@ body{
     width:                  98%; 
     background-color:       24303c;
     padding:                8px 3px;
-    border-radius:          4px;    /*VERIFICAR SI SE PUEDE REDUCIR*/
+    border-radius:          8px;    /*VERIFICAR SI SE PUEDE REDUCIR*/
     font-size:              18px;
 }
 
 .botonEnviar{    
-    background-color:       #52c22f;
+    background-color:       #9cd2d3d4;
     color:                  white;
     font-size:              20px;
     height:                 50px;
     width:                  200px;
     border-radius:          4px;
+
+    font-weight:            bold;
 }/*FIN DE botonEnviar*/
 
 input:hover{
-    border:                 3px #4466af solid;
+/*    border:                 3px #4466af solid;*/
+    border:                 3px #0799b6 solid;
 }
 
 .hoverable:hover {
-    background-color:       #34b40d;
+    background-color:           #0799b6;
 }
 
 /****************************************************************************/
 /*INICIAR SESION*/
+
+.titulo{
+    border: 3px green solid;
+}
 
 .iniciarSesion{    
     width:                  500px;
@@ -59,7 +91,7 @@ input:hover{
 }
 
 .grid-nested__IniciarSesion{
-    /*border: 3px green solid;*/ 
+    /*border: 3px green solid;*/
     margin:                 4px;
     padding:                5px;
 }
@@ -98,19 +130,23 @@ a{
     text-decoration:        none;
 }
 
+a:hover{
+    color:                  #0799b6;
+    font-weight:            bold;
+}
 /****************************************************************************/
 /*CREAR CUENTA*/
 
 .crearCuenta{
     width:                  550px;
-    height:                 550px;   
+    height:                 490px;   
 }
 
 .grid__CrearCuenta{
     margin:                 2px;
     display:                grid;
     grid-template-columns:   20% auto auto auto;
-    grid-template-rows:     15% 12% 12% 12% 12% 12%;
+    grid-template-rows:     15% 12% 12% 12% 12% ;
 }
 
 .grid-nested__CrearCuenta{
@@ -203,16 +239,42 @@ a{
 
 .estructuraCambioContraseña{
     width:                  500px;
-    height:                 300px;
+    height:                 350px;
 }/*FIN DE registro*/
 
 .contenedorGrid{
     display:                grid;
     grid-template-columns:  1fr;
-    grid-template-rows:     20% 15% 22% 22% 25%;
+    grid-template-rows:     18% 13% 18% 18% 20% 10%;
 }
 
 .nested-grid{
-    /*border:                 2px rgb(148, 0, 247) solid;*/
-    margin:                 10px 8px;
+/*    border:                 2px rgb(148, 0, 247) solid;*/
+    margin:                 8px 8px;
+}
+
+/****************************************************************************/
+/* DATOS DE USUARIO */
+.estructuraDatosUsuario{
+    width:                  500px;
+    height:                 470px;
+}/*FIN DE registro*/
+
+/****************************************************************************/
+
+#error-message{
+    margin-top:             20px;
+    color:                  red;
+    display:                none;
+    font-family:            'calibri';
+    font-size:              20px;
+}
+
+.error{
+    color:                 red ;
+    display:                block;
+}
+
+.invalid{
+    border: 2px red solid;    
 }

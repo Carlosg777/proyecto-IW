@@ -7,6 +7,8 @@ router.get('/', (req, res)=>{
     res.render('iniciar_sesion');
 });
 
+export let usuariOCcorreoF = ''; 
+
 router.post('/iniciarSesion', async (req, res)=>{
     let usuariOCcorreoF = req.body.user;
     let passwdF = req.body.passwd;
@@ -19,7 +21,7 @@ router.post('/iniciarSesion', async (req, res)=>{
         const datosUsuario = results[0];
         //res.redirect('/users/inicio');
         //res.render('users/inicio',{user:datosUsuario});
-      res.redirect(`users/inicio?user=${encodeURIComponent(JSON.stringify(datosUsuario))}`);
+      res.redirect(`principal/inicio?user=${encodeURIComponent(JSON.stringify(datosUsuario))}`);
     } else {
       // Manejar el error
         res.write('usuario no registrado o contrasena incorrecta');  

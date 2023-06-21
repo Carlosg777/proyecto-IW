@@ -1,16 +1,40 @@
 <%- include('partials/head',{titulo:'Recuperar contraseña'}); %>
 
-  <body>
-    <div class="container">
-      <h1>Recuperar contraseña</h1>
-      <div class="form-container">
-        <form action="/recuperar/recup" method="post">
-          <div class="forma">
-            <input name="userOcorreo" type="text" placeholder="nombre de usuario o correo">
-            <input class="btn" type="submit" type="c" value="Enviar">
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
-  </html>
+<body>
+
+  <header>
+      <h2 class="fuente">U ACADEMY</h2>
+  </header>
+
+  <main>
+
+  <form action="/recuperar/recup" class="estructura recuperarCuenta grid__RecuperarCuenta" method="post"> 
+
+      <h4 class="grid-nested__RecuperarCuenta"> RECUPERA TU CUENTA </h4>
+
+      <section class="grid-nested__RecuperarCuenta caja__RecuperarCuenta">
+          <p>Ingresa tu correo o tu nombre de usuario.</p>
+      </section>
+
+      <section class="grid-nested__RecuperarCuenta">
+          <input  class=          "inputDatos"  
+                  type=           "email" 
+                  id=             "userOcorreo"
+                  name=           "userOcorreo"  
+                  required>
+                  <span></span>
+      </section>
+
+      <section class="grid-nested__RecuperarCuenta centrar">
+          <input  class=          "botonEnviar hoverable" 
+                  type=           "submit" 
+                  value=          "Enviar">
+      </section>
+  </form>
+
+  </main>
+  
+  <script src="/js/validacionrecuperarCuenta.js"></script>
+
+</body>
+</html>

@@ -17,17 +17,17 @@ router.post('/recup', async (req, res)=>{
 
     if(results.length > 0) {
         codigoRecuperacion = crypto.randomInt(100000, 999999);
-        // try{
-        //         await transporter.sendMail({
-        //             from: '"Cursitos online" <gcarlosjael@gmail.com>',
-        //             to: 'gcarlosjael@gmail.com',
-        //             subject: 'Restablece tu contraseña',
-        //             text: `El código que debe ingresar es: ${codigoRecuperacion}`
-        //         })
-        // } catch (error){
-        //     console.log()
-        //     return res.status(400).json({ menssage: 'Algo salio mal'});
-        // }
+        try{
+                await transporter.sendMail({
+                    from: '"Cursitos online" <gcarlosjael@gmail.com>',
+                    to: 'gcarlosjael@gmail.com',
+                    subject: 'Restablece tu contraseña',
+                    text: `El código que debe ingresar es: ${codigoRecuperacion}`
+                })
+        } catch (error){
+            console.log()
+            return res.status(400).json({ menssage: 'Algo salio mal'});
+        }
         
         res.render('ingresar_codigo', { codigoRecuperacion , userOcorreo });
         // res.write('Se ha enviado el correo...');

@@ -1,0 +1,20 @@
+<%- include('partials/head',{titulo:'Agregar datos tarjeta'}); %>
+
+  <body>
+    <div class="container">
+      <h1>Complemente su información para agregar una tarjeta</h1>
+      <div class="form-container">
+        <form action="/datosUsuario/datosUsuarioo" method="post" enctype="multipart/form-data">
+          <div class="forma">
+            <input name="curp" type="text" placeholder="CURP">
+            <input name="direc" type="text" placeholder="Direccion">
+            <input name="num" type="text" placeholder="NUmero de telefono">
+            <input name="estado_de_cuenta" type="file" placeholder="Estado de cuenta">
+
+            <input class="btn" type="submit" type="c" value="Enviar">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  </html>

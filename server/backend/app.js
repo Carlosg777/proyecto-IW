@@ -8,9 +8,11 @@ import express from 'express'
 import iniciar_sesion from './routes/iniciar_sesion.js'
 import crear from './routes/crear_cuenta.js'
 import recuperar from './routes/recuperar.js'
+import principal from './routes/principal.js'
 import users from './routes/users.js'
 import in_codigo from './routes/ingresar_codigo.js'
 import cambio_contra from './routes/cambio_contrasenia.js'
+import datosUsuario from './routes/datosUsuario.js'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -28,30 +30,13 @@ app.set('view engine','ejs');
 // Rutas del proyecto
 app.use('/', iniciar_sesion);
 app.use('/users', users);
+app.use('/principal',principal);
 app.use('/recuperar',recuperar);
 app.use('/crear_cuenta',crear);
 app.use('/ingresar_codigo',in_codigo);
 app.use('/cambio_contrasenia',cambio_contra);
+app.use('/datosUsuario',datosUsuario);
 
-//sql PRUEBA PING
-app.get('/ping', async (req, res) => {
-  const [result] = await pool.query('SELECT "hello word" as RESULT');
-  res.json(result[0]);
-})
-
-app.get('/ping2', async (req, res) => {
-  const [result] = await pool.query(''+
-  'INSERT INTO usuario(correo_electronico, nombre_usuario, nombre, apellido_paterno, apellido_materno, contrasena) '+
-  'VALUES ("gcarlosjael@gmail.com","Carlos777","Carlos Jael","Guillén","González",SHA2("1234", 256))');
-  res.json(result);
-})
-
-// PRUEBA DE LA BASE: proyecto_IW
-app.get('/create', async (req, res) =>{
-  const result = await pool.query('INSERT INTO users(name)'+
-  ' VALUES ("CAR")')
-  res.json(result);
-})
 
 //Se ejecuta el servidor en el puerto establecido: "localhost:3000"
 app.listen(PORT, ()=>{
